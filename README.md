@@ -3,11 +3,12 @@
 # :unlock: Unlock Airtel Router
 
 > [!IMPORTANT]
-> These scripts have been tested on the following ONTs and may not work correctly on other models:
+> These scripts have been tested on the following devices and may not work correctly on other models:
 >
 > - AOT5221ZY
 > - AOT5222ZY
 > - PMG5617-R20B
+> - AAP4221ZY (AirFiber IDU) — different config key and HTTPS-only UI; use the dedicated guide: [AAP4221ZY.md](AAP4221ZY.md)
 
 
 Restore disabled and hidden settings in the Airtel router web UI. The scripts enable SSH on your Airtel router, unlock the UI and keep it unlocked after each reboot.
