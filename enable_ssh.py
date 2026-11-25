@@ -41,10 +41,17 @@ def add_ssh_config(router_ip, username, port):
             print(f"Host airtel already exists in {config}; leaving it unchanged.")
             return True
 
-    config.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
+    config.parent.mkdir(
+        mode=0o777 if sys.platform == "win32" else 0o700,
+        parents=True,
+        exist_ok=True,
+    )
+
     config.write_text(entry + "\nHost *\n" + existing, encoding="utf-8")
+
     if sys.platform != "win32":
         config.chmod(0o600)
+
     return True
 
 
